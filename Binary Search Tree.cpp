@@ -141,6 +141,61 @@ Node* delete_element(int data,Node* root)
     return root;
 }
 
+/*
+Node* searching_element(Node* root,int data)
+{
+    if(root == NULL)
+    {
+        cout << "Not present" << " ";
+    }
+    else if(data > root->key)
+    {
+        root->right = searching_element(root->right,data);
+    }
+    else if(data < root->key)
+    {
+        root->left = searching_element(root->left,data);
+    }
+    else
+    {
+        cout << "Present" << " ";
+    }
+    return root;
+}*/
+
+Node* searching_element(Node* root,int data)
+{
+    if(root == NULL)
+    {
+        cout << "Not present" << " ";
+    }
+    else
+    {
+        queue<Node*> q;
+        q.push(root);
+        while(!q.empty())
+        {
+            Node* present = q.front();
+            q.pop();
+            if(present->key == data)
+            {
+                cout << "Found" << endl;
+                return root;
+            }
+            if(present->left != NULL)
+            {
+                q.push(present->left);
+            }
+            if(present->right != NULL)
+            {
+                q.push(present->right);
+            }
+        }
+        cout << "Not found" << endl;
+    }
+    return root;
+}
+
 int main() {
     Node* root = NULL;
     root = insert_element(60,root);
