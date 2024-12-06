@@ -13,7 +13,7 @@ int main() {
 	        int rem = mul%10;
 	        ans = ans + rem*rem;
 	        mul = mul/10;
-	    }
+	    } 
 	    n = ans;
 	    ans = 0;
 	    if(n/10 ==0)
