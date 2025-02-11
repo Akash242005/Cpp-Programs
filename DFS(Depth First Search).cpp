@@ -9,7 +9,7 @@ struct Edge{
 };
 
 class Graph{
-    public:
+    public: 
         vector<vector<int>> adjlist;
         Graph(vector<Edge> const&edges,int n)
         {
