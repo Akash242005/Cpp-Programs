@@ -7,7 +7,7 @@ class Node
         Node* prev;
         int key;
         Node* next;
-};
+}; 
 
 Node* newnode(int data)
 {
