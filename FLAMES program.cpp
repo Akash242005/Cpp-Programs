@@ -11,7 +11,7 @@ int main() {
 	    {
 	        if(name1[i]==name2[j])
 	        {
-	            name1[i] = '*';
+	            name1[i] = '*'; 
 	            name2[j] = '*';
 	        }
 	    }
